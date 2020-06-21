@@ -1,0 +1,9 @@
+<h2>{{count}}</h2>
+<button (click)='add()'>ADD 1</button>
+<button (click)='clear()'>CLEAR</button>
+
+<div>
+    <label>SET COUNT:</label> <input [(ngModel)]="count" placeholder="count" /><br>
+    <label>NAME:</label> <input [(ngModel)]="name" /><br>
+    <button (click)='save()'>SAVE COUNT</button>
+</div>

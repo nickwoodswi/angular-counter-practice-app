@@ -1,0 +1,12 @@
+<h2>Saved Counts</h2>
+<div *ngIf='name && count'>
+    <h3>Updating Count:</h3>
+    <input [(ngModel)]='name' />
+    <input [(ngModel)]='count' />
+    <button (click)='saveUpdate()'>SAVE UPDATE</button>
+</div>
+<ul>
+    <li *ngFor='let count of counts'>
+        <b>{{count.name}}</b> - <b>{{count.count}}</b> ({{count.sub_date}}) <button (click)="deleteCount(count.id)">DELETE</button> <button (click)="updateCount(count.id)">UPDATE</button>
+    </li>
+</ul>
